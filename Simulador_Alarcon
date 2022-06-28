@@ -18,7 +18,7 @@ function reglas() {
     Tambien tienes 1 potenciador, con el que podras fortificar tu ataque.
     Con el potenciador "S", invocaras un compañero que multiplicara tu daño x3.
     `);
-    let inicio = prompt("¿Lista para empezar?")
+    let inicio = prompt("¿Liste para empezar?")
 
     while (true) {
         if (inicio == "si" || inicio == "yes") {
@@ -28,6 +28,7 @@ function reglas() {
         inicio = prompt("Entraste en un espacio infinito por cobarde... ¿Listo para empezar?");
     }
 }
+
 
 function juego() {
     alert("vale comenzemos...");
@@ -39,9 +40,14 @@ Tu primer ataque es un ataque fisico que quita 10 puntos de vida. para usarlo te
     Tambien tienes 1 potenciador, con el que podras fortificar tu ataque.
     Con el potenciador "S", invocaras un compañero que multiplicara tu daño x3.`);
 
-    while (ataquewarrior !== 1) {
+    while (true) {
+        if (ataquewarrior == "s" || ataquewarrior == "b" || ataquewarrior == "a" ) {
+            break
+        }
         ataquewarrior = prompt("Escoje un ataque...")
 }
+}
+/*
 switch (ataquewarrior) {
     case "A":
         alert("atacaras con 10 puntos");
@@ -54,8 +60,10 @@ switch (ataquewarrior) {
         alert("atacaras con 20 puntos");
         break;
 }
-
 }
+
+*/
+
 //if (ataquewarrior == "Tu nombre") {lifeBoss - 10}
 
 

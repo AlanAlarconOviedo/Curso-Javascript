@@ -4,6 +4,7 @@
 
 let lifeBoss = 100
 let warriorLife = 50
+let ataquewarrior = 0
 
 function reglas() {
     alert("welcome guerrero, Estas a punto de iniciar una batalla con Κοάλεμος");
@@ -30,6 +31,11 @@ function reglas() {
 }
 
 function juego() {
+
+    let respuestaA = ""
+    let respuestaB = ""
+    let respuestaS = ""
+
     alert("vale comenzemos...");
 
 
@@ -39,23 +45,45 @@ Tu primer ataque es un ataque fisico que quita 10 puntos de vida. para usarlo te
     Tambien tienes 1 potenciador, con el que podras fortificar tu ataque.
     Con el potenciador "S", invocaras un compañero que multiplicara tu daño x3.`);
 
-    while (ataquewarrior !== 1) {
+    while (ataquewarrior !== "S") {
+        if (ataquewarrior == "B" || ataquewarrior == "A") {
+            break
+        }
         ataquewarrior = prompt("Escoje un ataque...")
-}
-switch (ataquewarrior) {
-    case "A":
-        alert("atacaras con 10 puntos");
-        let aWinner = prompt("Hay algo que, aunque te pertenezca, la gente siempre lo utiliza más que tú. ¿Qué es?")
-        break;
-    case "B":
-        alert("atacaras con 20 puntos");
-        break;
-    case "S":
-        alert("atacaras con 20 puntos");
-        break;
-}
+    };
+
+    switch (ataquewarrior) {
+        case "A":
+            respuestaA = prompt("¿Esta cosa se devora a todas las cosas; Pájaros, bestias, árboles, flores; Carcome el hierro, muerde el acero; Muele duras piedras y las reduce a harina; Mata al rey, arruina la ciudad, Y derriba a la montaña.");
+            while (respuestaA !== "El tiempo") {
+
+                respuestaA = prompt("Vuelve a intentarlo..¿Esta cosa se devora a todas las cosas; Pájaros, bestias, árboles, flores; Carcome el hierro, muerde el acero; Muele duras piedras y las reduce a harina; Mata al rey, arruina la ciudad, Y derriba a la montaña.");
+            }
+            if (respuestaA == "El tiempo") {
+                alert("Felicidades!, ahora el Boss estaba muy cansado, solo en esta ocasión lo has destruido con un solo ataque por el poder del guión, eres digno de entrar");
+            }
+            break;
+        case "B":
+            respuestaB = prompt("2-x = x-8, ¿Cual es el valor de x?");
+            while (respuestaB !== 5) {
+                respuestaB = prompt("lee sobre ecuaciones diferenciales... 2-x = x-8")
+            }
+            if (respuestaB == 5) {
+                alert("Felicidades!, ahora el Boss estaba muy cansado, solo en esta ocasión lo has destruido con un solo ataque por el poder del guión, eres digno de entrar");
+            }
+            break;
+        case "S":
+            prompt("Estás escapando de un laberinto, y tienes tres puertas delante. La puerta de la izquierda lleva a un ardiente infierno. La puerta del centro a un brutal asesino. Y la puerta de la derecha a un león que no ha comido en tres meses. ¿Qué puerta escoges?");
+            break;
+
+    }
 
 }
+
+
+
+
+
 //if (ataquewarrior == "Tu nombre") {lifeBoss - 10}
 
 
