@@ -65,24 +65,26 @@ Tu primer ataque es un ataque fisico que quita 10 puntos de vida. para usarlo te
             break;
         case "B":
             respuestaB = prompt("2-x = x-8, ¿Cual es el valor de x?");
-            while (respuestaB !== 5) {
+            while (respuestaB !== "5") {
                 respuestaB = prompt("lee sobre ecuaciones diferenciales... 2-x = x-8")
             }
-            if (respuestaB == 5) {
+            if (respuestaB == "5") {
                 alert("Felicidades!, ahora el Boss estaba muy cansado, solo en esta ocasión lo has destruido con un solo ataque por el poder del guión, eres digno de entrar");
             }
             break;
         case "S":
-            prompt("Estás escapando de un laberinto, y tienes tres puertas delante. La puerta de la izquierda lleva a un ardiente infierno. La puerta del centro a un brutal asesino. Y la puerta de la derecha a un león que no ha comido en tres meses. ¿Qué puerta escoges?");
+            respuestaS = prompt("Estás escapando de un laberinto, y tienes tres puertas delante. La puerta (1) de la izquierda lleva a un ardiente infierno. La puerta del centro (2) a un brutal asesino. Y la puerta (3) de la derecha a un león que no ha comido en tres meses. ¿Qué puerta escoges?");
+            while (respuestaS !== "3") {
+                respuestaS = prompt("Escoje entre la puerta (1), (2) o (3)")
+            }
+            if (respuestaS == "3") {
+                alert("Felicidades!, ahora el Boss estaba muy cansado, solo en esta ocasión lo has destruido con un solo ataque por el poder del guión, eres digno de entrar");
+            }
             break;
 
     }
 
 }
-
-
-
-
 
 //if (ataquewarrior == "Tu nombre") {lifeBoss - 10}
 
