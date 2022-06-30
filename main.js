@@ -2,9 +2,58 @@
 
 // CORE
 
-let lifeBoss = 100
-let warriorLife = 50
-let ataquewarrior = 0
+
+
+
+// incorporacion de Array (la idea es tener un array de objetos
+// para que en funcion del ataque que selecciona el jugador se despliegue una pregunta diferente)
+
+const PREGUNTAS_S = [{
+        sNum: 1,
+        sPregunta: "5 + 5 = ?",
+        sRespuesta: "10"
+    },
+    {
+        sNum: 2,
+        sPregunta: "10 - 2 = ?",
+        sRespuesta: "8"
+    },
+    {
+        sNum: 3,
+        sPregunta: "25 - 5 = ?",
+        sRespuesta: "20",
+    }
+]
+const PREGUNTAS_A = [{
+        aNum: 1,
+        aPregunta: "Estando roto es más útil que sin romperse. ¿Qué es?",
+        aRespuesta: "El huevo"
+    },
+    {
+        num: 2,
+        pregunta: "Hay algo que, aunque te pertenezca, la gente siempre lo utiliza más que tú. ¿Qué es?",
+        respuesta: "Tu nombre."
+    },
+    {
+        num: 3,
+        pregunta: "Estoy en todo pese a estar en nada. ¿Qué soy?",
+        respuesta: "La letra D",
+    }
+
+]
+
+
+//Esta parte solo es un ejercicio de como puedo usar los emtodos en los arrays para cumplir con la entrega XD
+
+const TODAS_LASPREGUNTAS = PREGUNTAS_A.forEach((element, i) => {
+    console.log(`${element} es la pregunta ${i}`)
+});
+
+
+
+
+
+// Esta parte es el simulador del juego
 
 function reglas() {
     alert("welcome guerrero, Estas a punto de iniciar una batalla con Κοάλεμος");
