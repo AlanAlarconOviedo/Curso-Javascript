@@ -8,6 +8,14 @@
 // incorporacion de Array (la idea es tener un array de objetos
 // para que en funcion del ataque que selecciona el jugador se despliegue una pregunta diferente)
 
+
+
+const BOSS = {
+    bossLife: 100,
+    bossAtack: "",
+    bossName: "Coalemo"
+
+}
 const PREGUNTAS_S = [{
         sNum: 1,
         sPregunta: "5 + 5 = ?",
@@ -54,6 +62,9 @@ const TODAS_LASPREGUNTAS = PREGUNTAS_A.forEach((element, i) => {
 
 
 // Esta parte es el simulador del juego
+
+
+
 
 function reglas() {
     alert("welcome guerrero, Estas a punto de iniciar una batalla con Κοάλεμος");
